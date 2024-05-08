@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getSingleArticle } from "../api";
 import { useNavigate } from "react-router-dom";
+import Comments from "./Comments";
 
 function ArticleById() {
   const { article_id } = useParams();
@@ -19,19 +20,24 @@ function ArticleById() {
   }
   useEffect(fetchSingleArticle, []);
   return (
-    <div className="single-article-card">
-      <h2 id="single-article-title">{singleArticle.title}</h2>
-      <div className="single-article-author">
-        <p>From {singleArticle.author}</p>
+    <>
+      <div className="single-article-card">
+        <h2 id="single-article-title">{singleArticle.title}</h2>
+        <div className="single-article-author">
+          <p>From {singleArticle.author}</p>
+          <p id="single-article-votes">Votes: {singleArticle.votes}</p>
+        </div>
+        <div className="single-article-image">
+          <img src={singleArticle.article_img_url} />
+        </div>
+        <div className="single-article-body">
+          <p>{singleArticle.body}</p>
+        </div>
+        <p>Comments: {singleArticle.comment_count}</p>
+        <button onClick={handleBackClick}>Back to Articles</button>
       </div>
-      <div className="single-article-image">
-        <img src={singleArticle.article_img_url} />
-      </div>
-      <div className="single-article-body">
-        <p>{singleArticle.body}</p>
-      </div>
-      <button onClick={handleBackClick}>Back to Articles</button>
-    </div>
+      <Comments article_id={article_id} />
+    </>
   );
 }
 
