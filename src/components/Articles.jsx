@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ArticleCard from "./ArticleCard";
+import ArticleCard from "./AllArticlesCard";
 import { getAllArticles } from "../api";
 
 function Articles() {
@@ -11,6 +11,7 @@ function Articles() {
       setArticles(articlesData.data.articles);
     });
   }
+
   useEffect(fetchArticles, []);
   return (
     <>
