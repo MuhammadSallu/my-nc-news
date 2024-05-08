@@ -15,6 +15,36 @@ body {
     #001f41
   );
 }
+.article-card {
+  background-image: linear-gradient(to left, #9df9e2, #51f5ed);
+  display: flex;
+  flex-direction: column;
+  width: 60em;
+  height: 20rem;
+  margin: 30px;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#votes {
+  font-size: 20px;
+}
+
+#comment-user {
+  font-weight: 500;
+}
+
+.comment-card {
+  font-weight: 1000;
+  background-image: linear-gradient(to left, rgb(255, 0, 0), rgb(255, 86, 168));
+  max-height: 10%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+}
 
 .articles-image img {
   display: grid;
@@ -72,19 +102,6 @@ ul {
   );
 }
 
-.article-card {
-  background-image: linear-gradient(to left, #9df9e2, #51f5ed);
-  display: flex;
-  flex-direction: column;
-  width: 60rem;
-  height: 20rem;
-  margin: 30px;
-  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
-  border-radius: 25px;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-
 .single-article-author {
   justify-content: center;
   position: relative;
@@ -96,7 +113,6 @@ ul {
   background-image: linear-gradient(to left, #9df9e2, #51f5ed);
   display: flex;
   flex-direction: column;
-  width: 80rem;
   height: auto;
   margin: 30px;
   box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
@@ -119,9 +135,10 @@ ul {
   position: relative;
   width: 450px;
   height: auto;
-  top: -150px;
+  top: -120px;
   left: 775px;
-  font-size: 20px;
+  font-size: 25px;
+  margin: -10px;
   text-align: left;
 }
 
@@ -135,4 +152,8 @@ img {
 
 #single-article-title {
   font-size: 50px;
+}
+
+#single-article-votes {
+  margin: 0px;
 }
