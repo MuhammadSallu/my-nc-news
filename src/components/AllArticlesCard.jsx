@@ -1,7 +1,18 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 function ArticleCard({ article }) {
+  const navigate = useNavigate();
+  const [articleId, setArticleId] = useState("");
+
+  function handleOnClick() {
+    setArticleId(article.article_id);
+    navigate(`/api/articles/${articleId}`);
+  }
+
   return (
-    <div className="article-card">
-      <div className="image">
+    <div className="article-card" onClick={handleOnClick}>
+      <div className="articles-image">
         <img src={article.article_img_url} />
       </div>
       <div className="article-title">
@@ -12,6 +23,7 @@ function ArticleCard({ article }) {
         <p id="article-votes">Votes: {article.votes}</p>
         <p id="article-comments">Comments: {article.comment_count}</p>
       </div>
+      <div className="article-id">{article.article_id}</div>
     </div>
   );
 }
