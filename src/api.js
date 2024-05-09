@@ -15,3 +15,10 @@ export function getComments(article_id) {
     `https://my-nc-news-m78t.onrender.com/api/articles/${article_id}/comments`
   );
 }
+
+export function patchVotes(article_id, increment) {
+  return axios.patch(
+    `https://my-nc-news-m78t.onrender.com/api/articles/${article_id}`,
+    { inc_votes: `${increment}` }
+  );
+}
