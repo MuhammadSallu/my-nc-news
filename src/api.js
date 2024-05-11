@@ -29,3 +29,9 @@ export async function addComment(article_id, comment) {
     comment
   );
 }
+
+export async function deleteComment(id) {
+  return await axios.delete(
+    `https://my-nc-news-m78t.onrender.com/api/comments/${id}`
+  );
+}

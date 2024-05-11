@@ -75,7 +75,6 @@ function ArticleById({ user }) {
         <div className="single-article-body">
           <p>{singleArticle.body}</p>
         </div>
-        <p>Comments: {singleArticle.comment_count}</p>
         <button onClick={handleBackClick}>Back to Articles</button>
       </div>
       <Comments article_id={article_id} user={user} />

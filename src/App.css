@@ -43,15 +43,16 @@ body {
 
 #comment-user {
   font-weight: 500;
+  font-size: 20px;
 }
 
 #comment-votes {
   position: relative;
   text-align: center;
-  font-size: 25px;
+  font-size: 40px;
   margin: 0px;
-  left: 55%;
-  bottom: 10px;
+  left: 47%;
+  bottom: 60px;
 }
 
 .comment-card {
@@ -66,9 +67,12 @@ body {
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 20px;
-  padding: 7.5px;
-  padding-right: 100px;
+  padding: 10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+}
+
+#comment-count {
+  font-size: 30px;
 }
 
 .articles-image img {
@@ -162,9 +166,9 @@ ul {
   position: relative;
   width: 450px;
   height: auto;
-  top: -120px;
+  top: -170px;
   left: 775px;
-  font-size: 25px;
+  font-size: 30px;
   margin: -10px;
   text-align: left;
 }
@@ -187,9 +191,9 @@ img {
 
 .vote-up img {
   position: relative;
-  left: 55%;
-  bottom: 100px;
-  width: 40px;
+  left: 47%;
+  bottom: 180px;
+  width: 50px;
 }
 
 .vote-up img:hover {
@@ -210,9 +214,9 @@ img {
 
 .vote-down img {
   position: relative;
-  left: 55%;
-  bottom: 50px;
-  width: 40px;
+  left: 47%;
+  bottom: 100px;
+  width: 50px;
 }
 
 .article-vote-up input {
@@ -266,9 +270,31 @@ img {
 }
 
 #comment-button:disabled {
-  background: rgba(255, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #comment-text:disabled {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#delete-button:disabled {
   background: rgba(255, 0, 0, 0.5);
+}
+
+#delete-button {
+  position: relative;
+  right: 45%;
+  top: 20px;
+  font-size: 50px;
+  border-radius: 100%;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.9;
+}
+
+#comment-body {
+  font-size: 20px;
 }
