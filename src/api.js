@@ -35,3 +35,13 @@ export async function deleteComment(id) {
     `https://my-nc-news-m78t.onrender.com/api/comments/${id}`
   );
 }
+
+export function getTopics() {
+  return axios.get("https://my-nc-news-m78t.onrender.com/api/topics");
+}
+
+export function getArticlesByTopics(topic) {
+  return axios.get(
+    `https://my-nc-news-m78t.onrender.com/api/articles?topic=${topic}`
+  );
+}

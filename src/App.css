@@ -298,3 +298,11 @@ img {
 #comment-body {
   font-size: 20px;
 }
+
+#select-topics {
+  border-radius: 100px;
+  margin: 25px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
