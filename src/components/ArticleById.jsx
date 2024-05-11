@@ -4,7 +4,7 @@ import { getSingleArticle, patchVotes } from "../api";
 import { useNavigate } from "react-router-dom";
 import Comments from "./Comments";
 
-function ArticleById() {
+function ArticleById({ user }) {
   const { article_id } = useParams();
   const [singleArticle, setSingleArticle] = useState({});
   const [articleVotes, setArticleVotes] = useState(0);
@@ -78,7 +78,7 @@ function ArticleById() {
         <p>Comments: {singleArticle.comment_count}</p>
         <button onClick={handleBackClick}>Back to Articles</button>
       </div>
-      <Comments article_id={article_id} />
+      <Comments article_id={article_id} user={user} />
     </>
   );
 }

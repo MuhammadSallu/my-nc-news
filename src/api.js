@@ -18,7 +18,14 @@ export function getComments(article_id) {
 
 export function patchVotes(article_id, increment) {
   return axios.patch(
-    `https://my-nc-news-m78t.onrender.com/api/articles/${article_id}`,
+    `http://my-nc-news-m78t.onrender.com/api/articles/${article_id}`,
     { inc_votes: `${increment}` }
+  );
+}
+
+export async function addComment(article_id, comment) {
+  return await axios.post(
+    `https://my-nc-news-m78t.onrender.com/api/articles/${article_id}/comments`,
+    comment
   );
 }

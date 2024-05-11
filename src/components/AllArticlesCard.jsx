@@ -5,7 +5,7 @@ function ArticleCard({ article }) {
   const navigate = useNavigate();
   const [articleId, setArticleId] = useState("");
 
-  function handleOnClick() {
+  function handleOnClick(event) {
     setArticleId(article.article_id);
     navigate(`/api/articles/${articleId}`);
   }

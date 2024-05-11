@@ -217,7 +217,7 @@ img {
 
 .article-vote-up input {
   position: relative;
-  right: 75px;
+  right: 90px;
   bottom: 75px;
   width: 40px;
   background: none;
@@ -225,8 +225,8 @@ img {
 
 .article-vote-down input {
   position: relative;
-  left: 75px;
-  bottom: 125px;
+  left: 90px;
+  bottom: 120px;
   width: 40px;
   background: none;
 }
@@ -239,4 +239,36 @@ img {
 .article-vote-up input:hover {
   border-radius: 10px;
   background-color: rgb(0, 121, 2);
+}
+
+#comment-text {
+  font-size: 30px;
+  width: 95%;
+  height: auto;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+#comment-button {
+  font-size: 20px;
+  width: 10%;
+  height: auto;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+#comment-button:disabled {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+#comment-text:disabled {
+  background: rgba(255, 0, 0, 0.5);
 }
